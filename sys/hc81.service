@@ -1,0 +1,12 @@
+[Unit]
+Description=HC81
+After=network.target
+
+[Service]
+User=root
+#Environment=REDIS_HOST=localhost
+WorkingDirectory=/home/rov/HC81
+ExecStart=/usr/bin/node bin/www
+
+[Install]
+WantedBy=multi-user.target
